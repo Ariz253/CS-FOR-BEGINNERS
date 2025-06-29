@@ -1,0 +1,251 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS FOR BEGINNERS</title>
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/Request_course.css">
+
+</head>
+
+<body>
+
+    <!-- Header Start -->
+    <header>
+        <h1>
+            <span style="color: #FF6600;">CS</span>
+            <span style="color: #44425A;">for Beginners</span>
+        </h1>
+    </header>
+    <!-- Header End -->
+
+    <!-- Navbar Start -->
+    <nav>
+        <div class="dropdown">
+            <a href="#" id="subjectsDropdown">Subjects <i class="fa fa-angle-down"></i></a>
+            <div class="dropdown-content" id="subjectsList">
+                <a href="/c_page">C</a>
+                <a href="/cplusplus_page">C++</a>
+                <a href="/java">JAVA</a>
+                <a href="/python_page">PYTHON</a>
+                <a href="/Mysql_page">MySQL</a>
+                <a href="/html_page">HTML</a>
+                <a href="/css_page">CSS</a>
+                <a href="/java_script_page">JavaScript</a>
+            </div>
+        </div>
+        <a href="/index" style="text-decoration: none; color: white; margin-right: 2rem;">Home</a>
+        <a href="/about" style="text-decoration: none; color: white; margin-right: 2rem;">About</a>
+        <a href="/Coding_Etiquette" style="text-decoration: none; color: white; margin-right: 2rem;">Coding Etiquette</a>
+        <a href="/Request_course" style="text-decoration: none; color: white;">Request a course</a>
+        <a href="#" class="sign-up" style="margin-left: auto;" id="logoutButton">Logout</a>
+        <img src="img/bms_logo.jpg" alt="BMS College Logo" class="bms-logo">
+
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Page Header Start -->
+    <div class="page-header">
+        <h3>Request Course</h3>
+        <div class="breadcrumb">
+            <p><a href="/index">Home</a></p>
+            <i class="fa fa-angle-double-right"></i>
+            <p><a href="#">Courses</a></p>
+            <i class="fa fa-angle-double-right"></i>
+            <p><a href="#">Type in your request below</a></p>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+    <!-- Carousel and Course Request Section Start -->
+<div class="container mt-5 text-center">
+    <!-- Course Request Message -->
+    <div id="courseRequestSection" class="mt-5">
+        <h1 style="color: #44425A;">Not able to find the course you want?</h1>
+        <p><b>Send a course request to us, and well work on providing it!</b></p>
+        
+        <!-- Google-like Search Bar -->
+        <!-- Google-like Search Bar -->
+<form id="courseRequestForm" style="display: flex; justify-content: center;">
+        <div class="form-group" style="position: relative; width: 400px;">
+            <input type="text" id="courseName" 
+                   placeholder="Enter course name" required 
+                   style="
+                       width: 100%;
+                       padding: 12px 50px 12px 20px; 
+                       border: 1px solid #ddd;
+                       border-radius: 25px;
+                       font-size: 19px;
+                       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+                       outline: none;
+                   ">
+            <button type="submit" style="
+                    position: absolute;
+                    right: 10px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background-color: transparent;
+                    border: none;
+                    color: #007bff;
+                    cursor: pointer;
+                    font-size: 18px;">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+    </form>
+    </div>
+</div>
+<!-- Carousel and Course Request Section End -->
+
+<!-- Carousel Script for Speed Control -->
+<script>
+    $(document).ready(function() {
+        $('#courseCarousel').carousel({
+            interval: 4000  // Adjusts carousel transition speed
+        });
+    });
+</script>
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white py-5 px-sm-3 px-lg-5" style="margin-top: 90px;">
+        <div class="row pt-5">
+            <div class="col-lg-7 col-md-12">
+                <div class="row footer-section">
+                    <div class="col-md-6 mb-5">
+                        <h5 class="text-primary text-uppercase mb-4 letter-spacing">Get In Touch</h5>
+                        <p><i class="fa fa-map-marker-alt"></i>BMS college of engineering</p>
+                        <p><i class="fa fa-phone-alt"></i>+91 12345 67890</p>
+                        <p><i class="fa fa-envelope"></i>csforbeginners72@gmail.com</p>
+                        <div class="d-flex justify-content-start mt-4">
+                            <a class="btn btn-outline-light btn-square" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-square" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-square" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-outline-light btn-square" href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-5 text-center">
+                        <h3 class="text-primary text-uppercase mb-4 letter-spacing"></h3>
+                        <p style="font-family: 'Courier New', monospace;"><h3><em>"The only way to learn a new programming language <br>is by writing programs in it."</em></h3></p>
+                    </div>
+                    <div class="col-md-6 mb-5">
+                        <h5 class="text-primary text-uppercase mb-4 letter-spacing">Quick Links</h5>
+                        <div class="d-flex flex-column">
+                            <a class="text-white mb-2" href="/c_page"><i class="fa fa-angle-right"></i>C</a>
+                            <a class="text-white mb-2" href="/cplusplus_page"><i class="fa fa-angle-right"></i>C++</a>
+                            <a class="text-white mb-2" href="/java"><i class="fa fa-angle-right"></i>Java</a>
+                            <a class="text-white mb-2" href="/python_page"><i class="fa fa-angle-right"></i>Python</a>
+                            <a class="text-white mb-2" href="/Mysql_page"><i class="fa fa-angle-right"></i>MySQL</a>
+                            <a class="text-white mb-2" href="/html_page"><i class="fa fa-angle-right"></i>HTML</a>
+                            <a class="text-white mb-2" href="/css_page"><i class="fa fa-angle-right"></i>CSS</a>
+                            <a class="text-white mb-2" href="/java_script_page"><i class="fa fa-angle-right"></i>JavaScript</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="text-center text-md-left">
+                <p class="mb-2">&copy; <a class="text-primary" href="/index">CS FOR BEGINNERS</a>. All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+    <script>
+        document.getElementById("subjectsDropdown").addEventListener("click", function(event) {
+            event.preventDefault(); // Prevents the link from jumping
+            const dropdownContent = document.getElementById("subjectsList");
+            
+            // Toggle the display of dropdown
+            if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+            } else {
+                dropdownContent.style.display = "block";
+            }
+        });
+    
+        // Close the dropdown if clicked outside
+        window.addEventListener("click", function(event) {
+            if (!event.target.matches('#subjectsDropdown')) {
+                const dropdownContent = document.getElementById("subjectsList");
+                dropdownContent.style.display = "none";
+            }
+        });
+    </script>
+    
+
+    <script>
+        // Check if the user is authenticated
+        const token = localStorage.getItem('token');
+    
+        // If the token is not found, redirect to the login page
+        if (!token) {
+            alert("You must be logged in to access this page.");
+            window.location.href = '/log_in'; // Change to your login page URL
+        }
+    </script>
+
+    <script>
+        // New script for handling course request form submission
+        document.getElementById('courseRequestForm').addEventListener('submit', async function(e) {
+            e.preventDefault(); // Prevent the default form submission
+
+            const courseName = document.getElementById('courseName').value; // Get the course name
+            const token = localStorage.getItem('token'); // Retrieve the token from local storage
+
+            if (!token) {
+                alert("You must be logged in to request a course.");
+                window.location.href = '/log_in'; // Redirect to login if no token
+                return;
+            }
+
+            try {
+                const response = await fetch('http://localhost:3013/api/request-course', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': token // Include the token in the Authorization header
+                    },
+                    body: JSON.stringify({ courseName }) // Send the course name in the request body
+                });
+
+                const result = await response.json();
+
+                if (response.ok && result.success) {
+                    alert(result.message);
+                    // Optionally, you can clear the input field
+                    document.getElementById('courseName').value = '';
+                } else {
+                    alert(result.message );
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('An error occurred while requesting the course.');
+               
+            }
+        });
+    </script>
+
+    <script>
+        document.getElementById('logoutButton').addEventListener('click', function(e) {
+            e.preventDefault(); // Prevent the default link behavior
+
+            // Remove the token from local storage
+            localStorage.removeItem('token');
+
+            // Redirect to the login page
+            window.location.href = '/index'; // Change to your login page URL
+        });
+    </script>
+
+</body>
+</html>
+</html>

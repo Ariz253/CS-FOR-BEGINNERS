@@ -1,0 +1,22 @@
+{
+  "name": "cs-for-beginners",
+  "version": "1.0.0",
+  "description": "A web application to help beginners learn their first programming language through best available resources.",
+  "main": "serverfinal.js",
+  "scripts": {
+    "start": "node serverfinal.js"
+  },
+  "dependencies": {
+    "axios": "^1.7.9",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.3",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.9.1",
+    "nodemailer": "^6.9.16",
+    "path": "^0.12.7"
+  },
+  "author": "Ariz Ejaz Khan",
+  "license": "ISC"
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" href="css/sign_up.css">
+</head>
+<body>
+    <!-- Header Start -->
+    <header>
+        <h1>
+            <span>CS</span>
+            <span>for Beginners</span>
+        </h1>
+    </header>
+    <!-- Header End -->
+
+<div class="container">
+        <div class="signup-box">
+            <h2>Sign Up</h2>
+            <form id="signupForm">
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" placeholder="Enter your username" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="signup-btn">Sign Up</button>
+            </form>
+            <p class="login-link">Already have an account? <a href="log_in.html">Log in</a></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', async function(e) {
+            e.preventDefault(); // Prevent the form from submitting normally
+
+            // Get the form data
+            var username = document.getElementById('username').value;
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+
+            // Prepare data to send to the backend
+            const data = {
+                username: username,
+                email: email,
+                password: password
+            };
+
+            try {
+                // Send the form data to the server via POST request
+                const response = await fetch('http://localhost:3013/api/signup', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data),
+                });
+
+                const result = await response.json();
+
+                // Handle the response from the server
+                if (response.ok) {
+                    // Assuming the server returns a token in the response
+                    const token = result.token; // Adjust this based on your API response structure
+                    if (token) {
+                        localStorage.setItem('token', token); // Store the token in local storage
+                        alert('Congratulations ' + username + ', you have successfully signed up!');
+                        window.location.href = 'Request_course.html'; // Change to your homepage
+                    } else {
+                        alert('Signup successful, but no token received.');
+                    }
+                } else {
+                    alert(result.message || 'Error occurred during sign-up');
+}
+            } catch (error) {
+                console.error('Error:', error);
+                alert('An error occurred while signing up.');
+            }
+        });
+    </script>
+</body>
+</html>

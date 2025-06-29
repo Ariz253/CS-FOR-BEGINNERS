@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/log_in.css">
+</head>
+<body>
+    <!-- Header Start -->
+    <header>
+        <h1>
+            <span>CS</span>
+            <span>for Beginners</span>
+        </h1>
+    </header>
+    <!-- Header End -->
+    <div class="container">
+        <div class="signup-box">
+            <h2>Login Page</h2>
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" placeholder="Enter your username" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="signup-btn">Login</button>
+                <p id="error-message" style="color: red; text-align: center;"></p>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Modal and Overlay -->
+    <div id="modal-overlay" class="modal-overlay"></div>
+    <div id="congratulationsModal" class="modal">
+        <h3>Congratulations, <span id="username-display"></span>! You have logged in successfully.</h3>
+        <button id="closeModalBtn">OK</button>
+    </div>
+    
+
+</body>
+
+
+<script>
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+        e.preventDefault(); // Prevent the form from submitting normally
+
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+        var errorMessage = document.getElementById('error-message');
+
+        // Reset the error message
+        errorMessage.textContent = '';
+
+        // Send login request to the backend
+        fetch('http://localhost:3013/api/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ username, password })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                // Store the token in local storage
+                localStorage.setItem('token', data.token);
+
+                // Display success message and redirect
+                alert('Congratulations ' + username + ', you have successfully logged in!');
+                window.location.href = 'Request_course.html'; // Redirect to homepage
+            } else {
+                // Display the error message based on the response
+                errorMessage.textContent = data.message;
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            errorMessage.textContent = 'An error occurred. Please try again later.';
+        });
+    });
+</script>
+
+
+
+</html>

@@ -1,0 +1,241 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #f2f5f8;
+    color: #fff;
+    padding: 20px;
+    text-align: left;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    background-color: #495057;
+    padding: 15px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 15px;
+    margin: 0 10px;
+    position: relative;
+    /* Needed for dropdown */
+}
+
+nav a:hover {
+    background-color: #6c757d;
+    border-radius: 5px;
+}
+
+nav button {
+    color: #fff;
+    text-decoration: none;
+    padding: 15px;
+    margin: 0 10px;
+    position: relative;
+    /* Needed for dropdown */
+}
+
+nav button:hover {
+    background-color: #6c757d;
+    border-radius: 5px;
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #495057;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #6c757d;
+}
+
+.footer-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.footer h5 {
+    margin: 0;
+    margin-bottom: 10px;
+    color: #FF6600;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+.social a {
+    margin: 0 5px;
+    color: white;
+}
+
+.d-flex {
+    display: flex;
+    /* Ensure this is set to flex */
+    gap: 10px;
+    /* This will give a gap of 10px between each button */
+}
+
+.btn-square {
+    width: 40px;
+    /* Button width */
+    height: 40px;
+    /* Button height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-dark {
+    background-color: #343a40;
+}
+
+.text-white {
+    color: #ffffff;
+}
+
+.text-primary {
+    color: #007bff;
+}
+
+.py-5 {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+}
+
+.px-sm-3 {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+}
+
+.px-lg-5 {
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
+}
+
+.mb-2 {
+    margin-bottom: 0.5rem !important;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem !important;
+}
+
+.mb-5 {
+    margin-bottom: 3rem !important;
+}
+
+.mt-4 {
+    margin-top: 1.5rem !important;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.letter-spacing {
+    letter-spacing: 5px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-outline-light {
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+.border-top {
+    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-md-left {
+    text-align: left;
+}
+
+/* Font Awesome Icons */
+.fa {
+    margin-right: 0.5rem;
+}
+
+/* Sign Up Button */
+.sign-up {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    background-color: #007bff;
+    border-radius: 5px;
+}
+
+.sign-up:hover {
+    background-color: #0056b3;
+}
+
+.bms-logo {
+    position: absolute;
+    top: 20px;
+    /* Adjust the top position as needed */
+    right: 20px;
+    /* Adjust the right position as needed */
+    width: 60px;
+    /* Adjust the width as needed */
+    height: auto;
+}
+
+.page-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('../img/page-header.jpg') no-repeat center center;
+    background-size: cover;
+    color: #ffffff;
+    padding: 100px 0;
+    margin-bottom: 90px;
+    position: relative;
+    z-index: 1;
+}
+
