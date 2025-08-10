@@ -324,8 +324,8 @@ async function addCourse(courseName) {
                 const mailOptions = {
                     from: process.env.EMAIL,
                     to: users.map(user => user.email),
-                    subject: 'Course Available Now!',
-                    text: `The course "${lowerCaseCourseName}" is now available!`,
+                    subject: 'Info regarding requested programming language Available Now!',
+                    text: `The information about the programming language: "${lowerCaseCourseName}" is now available!. You can check it out on our website now.`,
                 };
 
                 transporter.sendMail(mailOptions, (error, info) => {
