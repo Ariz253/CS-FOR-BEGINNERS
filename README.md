@@ -27,7 +27,7 @@ A web application designed to help beginners learn programming languages and com
 
 1. **Clone the repository:**
     ```bash
-    git clone https://github.com/yourusername/CS-FOR-BEGINNERS.git
+    git clone https://github.com/Ariz253/CS-FOR-BEGINNERS.git
     cd CS-FOR-BEGINNERS
     ```
 i
